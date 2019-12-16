@@ -22,6 +22,7 @@ The idea for using text highlighting to create the visual bar comes from https:/
 
  
  #### Subtasks:
+ 
  The loading bar supports subtasks which add a second loading bar to the bottom of the loading bar, representing subtask progress. The primary bar will automatically fill according to the subtask's worth as the subtask increases its progress.
 
 + To launch a subtask:                                  
@@ -47,7 +48,7 @@ The idea for using text highlighting to create the visual bar comes from https:/
 
  **initialize(Double, [String])**:
  
-                         sets the number of tasks to be completed
+   sets the number of tasks to be completed
                          optionally changes the description
                          shows the form
 
@@ -57,25 +58,25 @@ The idea for using text highlighting to create the visual bar comes from https:/
 
  **incrementProgress([String], [Double])**:
  
-                         adds to the number of tasks completed,
+   adds to the number of tasks completed,
                          optionally changes the description under the progress bar
 
  **newSubTask(Double, [String], [Double])**:
  
-                         displays the subProgress bar and creates a new subtask with a given total
+   displays the subProgress bar and creates a new subtask with a given total
                          optionally changes the description under the progress bar
                          optionally takes a number (default 1) which corresponds to the number of total tasks which the subtask is worth
                          ends any previous subtask
 
  **endSubTask([String])**:   
  
-                         hides the subprogress bar and resets all data pertaining to the subtask
+   hides the subprogress bar and resets all data pertaining to the subtask
                          ensures progress is incremented by exactly the number given when the sub task was created
                          optionally changes the description under the progress bar
 
  **incrementSubProgress([String], [Double])**:
  
-                         equivalent of incrementProgress for the subprogress bar
+   equivalent of incrementProgress for the subprogress bar
                          the progress bar will also grow as the subtask gets completed, proportional to its worth
 
  **setProgress(Double)**:
@@ -130,18 +131,28 @@ The idea for using text highlighting to create the visual bar comes from https:/
 
 
 ## DEFAULTS:
+
  total and subtotal get set to 100
+ 
  progress shown as percentage
+ 
  no sub progress
+ 
  subtotal worth is set to 0
+ 
  Description = ""
+ 
  refreshRate of 0 (all updates are drawn)
+ 
  doEvents/Listen/preventNotResponding = True
+ 
  close when finished/autoclose = True
 
 
- ## INFO:
+ ### Refresh info:
  Drawing the bar continuously for very small tasks can bottleneck the actual processing of data as well as make the progress bar flash.
+ 
  The bar can be set to refresh only after a certain time (in seconds, eg 0.05) has elapsed for these situations.
+ 
  The bar will not draw any updates given during this period (although the object's values still get updated).
  All functions which update the view take an optional boolean parameter forceRefresh, which forces the progress bar to refresh regardless of the refresh rate set, useful if the bar seems to get stuck at the wrong task (because another task started but the bar hasn't refreshed yet so the task name was not changed). By default the refreshRate is 0, so all updates are "forced".
