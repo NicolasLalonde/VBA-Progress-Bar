@@ -71,13 +71,16 @@ The idea for using text highlighting to create the visual bar comes from https:/
  **endSubTask([String])**:   
  
    hides the subprogress bar and resets all data pertaining to the subtask
-                         ensures progress is incremented by exactly the number given when the sub task was created
-                         optionally changes the description under the progress bar
+                         
+   ensures progress is incremented by exactly the number given when the sub task was created
+                         
+   optionally changes the description under the progress bar
 
  **incrementSubProgress([String], [Double])**:
  
    equivalent of incrementProgress for the subprogress bar
-                         the progress bar will also grow as the subtask gets completed, proportional to its worth
+                         
+   the progress bar will also grow as the subtask gets completed, proportional to its worth
 
  **setProgress(Double)**:
  
@@ -118,7 +121,8 @@ The idea for using text highlighting to create the visual bar comes from https:/
  **setListen(Boolean)**:
  
  sets whether a doEvent line is ran while updating the view
-                         this allows MS word/excel to perform other actions while the script is running. Prevents the form from going blank occasionally with a message of "not responding", at a slight performance cost
+                         
+  this allows MS word/excel to perform other actions while the script is running. Prevents the form from going blank occasionally with a message of "not responding", at a slight performance cost
 
  **setAutoClose(Boolean)**:  
  
