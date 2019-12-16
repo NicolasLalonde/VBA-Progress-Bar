@@ -3,7 +3,7 @@ Progress bar to indicate progress for VBA subroutines which take a long time to 
 
 The idea for using text highlighting to create the visual bar comes from https://www.excel-easy.com/vba/examples/progress-indicator.html
 
-##BASIC USAGE:
+## BASIC USAGE:
 
  The Loading bar defines many methods for changing small parameters that you need not concern yourself with in regular use cases
  for regular use cases, the following suffice
@@ -25,7 +25,7 @@ The idea for using text highlighting to create the visual bar comes from https:/
  To end a subtask:                                     endSubTask; or closes automatically when it hits 100%; or closes automatically when a new subtask is created
 
 
-##FULL INTERFACE:
+## FULL INTERFACE:
 
  initialize(Double, [String]):
                          sets the number of tasks to be completed
@@ -79,7 +79,7 @@ The idea for using text highlighting to create the visual bar comes from https:/
  terminate:              closes the progress window
 
 
-##DEFAULTS:
+## DEFAULTS:
  total and subtotal get set to 100
  progress shown as percentage
  no sub progress
@@ -90,7 +90,7 @@ The idea for using text highlighting to create the visual bar comes from https:/
  close when finished/autoclose = True
 
 
- ##INFO:
+ ## INFO:
  drawing the bar continuously for very small tasks can bottleneck the actual processing of data as well as make the progress bar flash
  the bar can be set to refresh only after a certain time (in seconds, eg 0.05) has elapsed for these situations
  the bar will not draw any updates given during this period (although the object's values still get updated)
