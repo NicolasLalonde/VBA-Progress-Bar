@@ -49,8 +49,10 @@ The idea for using text highlighting to create the visual bar comes from https:/
  **initialize(Double, [String])**:
  
    sets the number of tasks to be completed
-                         optionally changes the description
-                         shows the form
+   
+   optionally changes the description
+                         
+   shows the form
 
  **setTotal(Double)**:
  
@@ -58,15 +60,19 @@ The idea for using text highlighting to create the visual bar comes from https:/
 
  **incrementProgress([String], [Double])**:
  
-   adds to the number of tasks completed,
-                         optionally changes the description under the progress bar
+   adds to the number of tasks completed
+   
+   optionally changes the description under the progress bar
 
  **newSubTask(Double, [String], [Double])**:
  
    displays the subProgress bar and creates a new subtask with a given total
-                         optionally changes the description under the progress bar
-                         optionally takes a number (default 1) which corresponds to the number of total tasks which the subtask is worth
-                         ends any previous subtask
+   
+   optionally changes the description under the progress bar
+   
+   optionally takes a number (default 1) which corresponds to the number of total tasks which the subtask is worth
+   
+   ends any previous subtask
 
  **endSubTask([String])**:   
  
